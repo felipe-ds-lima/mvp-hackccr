@@ -1,4 +1,4 @@
-package br.com.monts.bino;
+package br.com.monts.bina;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
@@ -13,7 +13,7 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "Bino";
+    return "assistente-bina";
   }
 
   @Override
@@ -21,7 +21,7 @@ public class MainActivity extends ReactActivity {
     return new ReactActivityDelegate(this, getMainComponentName()) {
       @Override
       protected ReactRootView createRootView() {
-       return new RNGestureHandlerEnabledRootView(MainActivity.this);
+      return new RNGestureHandlerEnabledRootView(MainActivity.this);
       }
     };
   }
