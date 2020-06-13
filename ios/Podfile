@@ -44,8 +44,8 @@ def flipper_post_install(installer)
   end
 end
 
-target 'BinoAssistenteCCR' do
-  # Pods for BinoAssistenteCCR
+target 'AssistenteBina' do
+  # Pods for AssistenteBina
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
   pod 'RCTRequired', :path => "../node_modules/react-native/Libraries/RCTRequired"
@@ -77,7 +77,7 @@ target 'BinoAssistenteCCR' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
-  target 'BinoAssistenteCCRTests' do
+  target 'AssistenteBinaTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -94,10 +94,10 @@ target 'BinoAssistenteCCR' do
   end
 end
 
-target 'BinoAssistenteCCR-tvOS' do
-  # Pods for BinoAssistenteCCR-tvOS
+target 'AssistenteBina-tvOS' do
+  # Pods for AssistenteBina-tvOS
 
-  target 'BinoAssistenteCCR-tvOSTests' do
+  target 'AssistenteBina-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end
