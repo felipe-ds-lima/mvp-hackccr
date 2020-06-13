@@ -129,7 +129,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.hackccr"
+        applicationId "br.com.monts.bino"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
