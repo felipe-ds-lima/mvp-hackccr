@@ -134,7 +134,7 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
-        manifestPlaceholders = [API_KEY: "$process.env.GOOGLE_MAPS_KEY"]
+        manifestPlaceholders = [API_KEY:"project.env.GOOGLE_MAPS_KEY"]
     }
     splits {
         abi {
