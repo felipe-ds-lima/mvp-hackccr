@@ -1,6 +1,8 @@
 import React from 'react';
-import { StatusBar, SafeAreaView } from 'react-native';
+import { StatusBar, YellowBox } from 'react-native';
 import Routes from './routes';
+
+YellowBox.ignoreWarnings(['Require cycle:']);
 
 const App = () => {
   return (
