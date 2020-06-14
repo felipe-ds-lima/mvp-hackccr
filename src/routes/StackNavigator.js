@@ -20,7 +20,7 @@ const defaultConfig = {
 
 const StackNavigator = () => {
   return (
-    <Stack.Navigator initialRouteName="Slide2">
+    <Stack.Navigator initialRouteName="Slide3">
       <Stack.Screen options={defaultConfig} name="SignIn" component={SignIn} />
       <Stack.Screen options={defaultConfig} name="SignUp" component={SignUp} />
 
