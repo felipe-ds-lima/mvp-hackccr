@@ -12,6 +12,7 @@ import {
   ArrowRight,
   ArrowLeft,
   ButtonLink,
+  ButtonView,
 } from './styles';
 
 // import { Container } from './styles';
@@ -31,12 +32,16 @@ const Slide4 = ({ navigation }) => {
       <LeftText>
         <BoldText>“Ei Bina”</BoldText> agora!
       </LeftText>
-      <ButtonLink onPress={next}>
-        <ArrowRight style={{ resizeMode: 'stretch' }} source={check} />
-      </ButtonLink>
-      <ButtonLink onPress={prev}>
-        <ArrowLeft style={{ resizeMode: 'stretch' }} source={arrowLeft} />
-      </ButtonLink>
+      <ButtonView isRight>
+        <ButtonLink onPress={next}>
+          <ArrowRight style={{ resizeMode: 'stretch' }} source={check} />
+        </ButtonLink>
+      </ButtonView>
+      <ButtonView>
+        <ButtonLink onPress={prev}>
+          <ArrowLeft style={{ resizeMode: 'stretch' }} source={arrowLeft} />
+        </ButtonLink>
+      </ButtonView>
       <Image style={{ resizeMode: 'stretch' }} source={binoImg} />
     </Background>
   );

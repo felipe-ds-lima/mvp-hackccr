@@ -12,10 +12,15 @@ export const ButtonLink = styled(TouchableOpacity)`
   width: 100%;
 `;
 
+export const ButtonView = styled.View`
+  width: 80px;
+  height: 80px;
+  margin: ${props => (props.isRight ? '0 16px 0 auto' : '0')};
+`;
+
 export const ArrowRight = styled.Image`
   width: 80px;
   height: 80px;
-  margin: 0 16px 0 auto;
 `;
 
 export const ArrowLeft = styled.Image`

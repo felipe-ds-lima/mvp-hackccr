@@ -12,6 +12,7 @@ import {
   ArrowLeft,
   ButtonLink,
   Selector,
+  ButtonView,
 } from './styles';
 
 // import { Container } from './styles';
@@ -33,12 +34,16 @@ const Slide2 = ({ navigation }) => {
         <Selector.Item label="Modelo de voz 1" value="1" />
         <Selector.Item label="Modelo de voz 2" value="2" />
       </Selector>
-      <ButtonLink onPress={next}>
-        <ArrowRight style={{ resizeMode: 'stretch' }} source={arrowRight} />
-      </ButtonLink>
-      <ButtonLink onPress={prev}>
-        <ArrowLeft style={{ resizeMode: 'stretch' }} source={arrowLeft} />
-      </ButtonLink>
+      <ButtonView isRight>
+        <ButtonLink onPress={next}>
+          <ArrowRight style={{ resizeMode: 'stretch' }} source={arrowRight} />
+        </ButtonLink>
+      </ButtonView>
+      <ButtonView>
+        <ButtonLink onPress={prev}>
+          <ArrowLeft style={{ resizeMode: 'stretch' }} source={arrowLeft} />
+        </ButtonLink>
+      </ButtonView>
       <Image style={{ resizeMode: 'stretch' }} source={binoImg} />
     </Background>
   );

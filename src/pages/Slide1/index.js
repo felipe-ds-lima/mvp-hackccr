@@ -12,6 +12,7 @@ import {
   ArrowRight,
   ArrowLeft,
   ButtonLink,
+  ButtonView,
 } from './styles';
 
 // import { Container } from './styles';
@@ -26,9 +27,11 @@ const Slide1 = ({ navigation }) => {
       <LeftText>
         Opa! Meu nome é <BoldText>Bina</BoldText> e vou te ajudar nessa
       </LeftText>
-      <ButtonLink onPress={next}>
-        <ArrowRight style={{ resizeMode: 'stretch' }} source={arrowRight} />
-      </ButtonLink>
+      <ButtonView>
+        <ButtonLink onPress={next}>
+          <ArrowRight style={{ resizeMode: 'stretch' }} source={arrowRight} />
+        </ButtonLink>
+      </ButtonView>
       <ButtonLink>
         <ArrowLeft style={{ resizeMode: 'stretch' }} source={arrowLeft} />
       </ButtonLink>

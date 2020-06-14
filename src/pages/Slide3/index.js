@@ -12,6 +12,7 @@ import {
   ArrowRight,
   ArrowLeft,
   ButtonLink,
+  ButtonView,
 } from './styles';
 
 // import { Container } from './styles';
@@ -31,12 +32,16 @@ const Slide3 = ({ navigation }) => {
         A qualquer momento você pode me chamar. É só falar{' '}
         <BoldText>“Ei Bina”</BoldText> que eu te atendo
       </LeftText>
-      <ButtonLink onPress={next}>
-        <ArrowRight style={{ resizeMode: 'stretch' }} source={arrowRight} />
-      </ButtonLink>
-      <ButtonLink onPress={prev}>
-        <ArrowLeft style={{ resizeMode: 'stretch' }} source={arrowLeft} />
-      </ButtonLink>
+      <ButtonView isRight>
+        <ButtonLink onPress={next}>
+          <ArrowRight style={{ resizeMode: 'stretch' }} source={arrowRight} />
+        </ButtonLink>
+      </ButtonView>
+      <ButtonView>
+        <ButtonLink onPress={prev}>
+          <ArrowLeft style={{ resizeMode: 'stretch' }} source={arrowLeft} />
+        </ButtonLink>
+      </ButtonView>
       <Image style={{ resizeMode: 'stretch' }} source={binoImg} />
     </Background>
   );
