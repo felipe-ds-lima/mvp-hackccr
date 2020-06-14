@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
+import Tts from 'react-native-tts';
 
 import Background from '~/components/Background';
 import binoImg from '~/assets/images/bino-head.png';
@@ -21,6 +22,13 @@ const Slide1 = ({ navigation }) => {
   function next() {
     navigation.navigate('Slide2');
   }
+
+  useEffect(() => {
+    Tts.stop();
+    Tts.setDefaultLanguage('pt-BR');
+    Tts.setDefaultVoice('pt-BR-language');
+    Tts.speak('Opa! Meu nome é Bina, e vou te ajudar nessa');
+  }, []);
 
   return (
     <Background>
