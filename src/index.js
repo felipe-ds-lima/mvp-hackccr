@@ -1,15 +1,22 @@
 import React from 'react';
-import { StatusBar, YellowBox } from 'react-native';
+import { StatusBar } from 'react-native';
+import { PersistGate } from 'redux-persist/integration/react';
+import { Provider } from 'react-redux';
+import Geolocation from '@react-native-community/geolocation';
 import Routes from './routes';
 
-YellowBox.ignoreWarnings(['Require cycle:']);
+import { store, persistor } from './store';
 
 const App = () => {
+  Geolocation.setRNConfiguration({});
+
   return (
-    <>
-      <StatusBar backgroundColor="#f8f7fd" barStyle="dark-content" />
-      <Routes />
-    </>
+    <Provider store={store}>
+      <PersistGate persistor={persistor}>
+        <StatusBar backgroundColor="#f8f7fd" barStyle="dark-content" />
+        <Routes />
+      </PersistGate>
+    </Provider>
   );
 };
 

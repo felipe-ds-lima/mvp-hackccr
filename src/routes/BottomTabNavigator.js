@@ -4,8 +4,10 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import { TransitionPresets } from '@react-navigation/stack';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
+import { Image } from 'react-native';
 import Map from '~/pages/Map';
 import Profile from '~/pages/Profile';
+import binaImg from '~/assets/images/bino-head.png';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -16,7 +18,11 @@ const defaultConfig = {
 
 const BottomTabNavigator = () => {
   return (
-    <Tab.Navigator initialRouteName="Map">
+    <Tab.Navigator
+      initialRouteName="Map"
+      barStyle={{ backgroundColor: '#fff' }}
+      shifting
+    >
       <Tab.Screen
         name="Map"
         component={Map}
@@ -28,6 +34,25 @@ const BottomTabNavigator = () => {
               name="map-outline"
               color={color}
               size={26}
+            />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Bina"
+        component={Map}
+        options={{
+          ...defaultConfig,
+          tabBarLabel: '',
+          tabBarIcon: () => (
+            <Image
+              source={binaImg}
+              style={{
+                resizeMode: 'contain',
+                height: 50,
+                position: 'absolute',
+                bottom: -13,
+              }}
             />
           ),
         }}
