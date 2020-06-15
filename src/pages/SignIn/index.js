@@ -22,6 +22,10 @@ const SignIn = ({ navigation }) => {
     navigation.navigate('SignUp');
   }
 
+  function handleGoToSlide() {
+    navigation.navigate('Slide1');
+  }
+
   return (
     <Background>
       <>
@@ -39,7 +43,7 @@ const SignIn = ({ navigation }) => {
           onChangeText={setPassword}
           secureTextEntry
         />
-        <Button>
+        <Button onPress={handleGoToSlide}>
           <ButtonText>Entrar</ButtonText>
         </Button>
 

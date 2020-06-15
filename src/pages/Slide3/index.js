@@ -9,7 +9,7 @@ import Tts from 'react-native-tts';
 import Axios from 'axios';
 import Background from '~/components/Background';
 import binoImg from '~/assets/images/bino-head.png';
-import arrowRight from '~/assets/images/arrow-forward.png';
+import arrowRight from '~/assets/images/check.png';
 import arrowLeft from '~/assets/images/arrow-backward.png';
 import {
   Image,
@@ -86,6 +86,10 @@ const Slide3 = ({ navigation }) => {
     navigation.navigate('Slide2');
   }
 
+  function next() {
+    navigation.navigate('Default');
+  }
+
   const speak = useCallback(() => {
     Tts.stop();
     Voice.stop();
@@ -128,7 +132,7 @@ const Slide3 = ({ navigation }) => {
         É só tocar no meu <BoldText>Ícone</BoldText> que eu te atendo
       </LeftText>
       <ButtonView isRight>
-        <ButtonLink onPress={() => {}}>
+        <ButtonLink onPress={next}>
           <ArrowRight style={{ resizeMode: 'stretch' }} source={arrowRight} />
         </ButtonLink>
       </ButtonView>
