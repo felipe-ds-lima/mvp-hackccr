@@ -40,7 +40,7 @@ const BottomTabNavigator = () => {
       />
       <Tab.Screen
         name="Bina"
-        component={Profile}
+        component={Map}
         options={{
           ...defaultConfig,
           tabBarLabel: '',
