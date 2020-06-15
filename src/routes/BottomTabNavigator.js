@@ -19,7 +19,7 @@ const defaultConfig = {
 const BottomTabNavigator = () => {
   return (
     <Tab.Navigator
-      initialRouteName="Map"
+      initialRouteName="Profile"
       barStyle={{ backgroundColor: '#fff' }}
       shifting
     >
